@@ -1,117 +1,328 @@
 {
     "personal": {
         "name": "Cristina Tuazon",
-        "title": "Full Stack Developer | AI Developer | Database Specialist",
-        "location": "Cagayan Valley, Philippines",
-        "summary": "Passionate software engineer with 5+ years building scalable applications...",
-        "elevator_pitch": "Brief 30-second introduction highlighting your unique value proposition",
+        "title": "Full Stack Developer | Graphic Designer | Database Specialist",
+        "location": "Tuguegarao City, Cagayan Valley, Philippines",
+        "summary": "Passionate full stack developer and database specialist with strong experience in building web applications, designing user-centric interfaces, and producing academic research outputs. Currently exploring AI development, RAG pipelines, and model integration to expand technical depth.",
+        "elevator_pitch": "I build efficient, scalable web applications using Laravel, MySQL, and modern front-end frameworks. I combine strong system architecture skills with design proficiency and research experience, allowing me to deliver complete, end-to-end solutions tailored to user needs.",
         "contact": {
-        "email": "wk.cristinatuazon@gmail.com",
-        "linkedin": "https://www.linkedin.com/in/cristina-tuazon/",
-        "github": "https://github.com/tinatuazon",
-        "portfolio": "https://yourportfolio.com"
+            "email": "wk.cristinatuazon@gmail.com",
+            "linkedin": "https://www.linkedin.com/in/cristina-tuazon/",
+            "github": "https://github.com/tinatuazon",
+            "portfolio": "https://yourportfolio.com"
         }
     },
+
     "salary_location": {
-        "current_salary": "$85,000 - $95,000 AUD",
-        "salary_expectations": "$95,000 - $110,000 AUD based on role complexity",
-        "location_preferences": ["Melbourne CBD", "Remote", "Hybrid"],
+        "current_salary": "None (Undergraduate student). Active freelancer focusing on system development, graphic design, and academic research services.",
+        "salary_expectations": "Flexible — depends on project scope, timeline, and required tech stack.",
+        "location_preferences": ["Tuguegarao City, Cagayan Valley, Philippines", "Remote", "Hybrid"],
         "relocation_willing": true,
-        "remote_experience": "3+ years remote collaboration experience",
-        "travel_availability": "Available for interstate travel up to 25%",
-        "work_authorization": "Australian Citizen / Permanent Resident"
+        "remote_experience": "No formal remote employment yet, but extensive remote freelance client interactions.",
+        "travel_availability": "Not available at the moment",
+        "work_authorization": "Philippine Citizen / Permanent Resident"
     },
+
     "experience": [
         {
-        "company": "TechCorp Australia",
-        "title": "Senior Software Engineer",
-        "duration": "Jan 2021 - Present (3.5 years)",
-        "company_context": "200+ employee fintech startup, Series B funding",
-        "team_structure": "Engineering team of 25, direct reports: 3 junior developers",
-        "achievements_star": [
-            {
-            "situation": "Legacy monolith causing 3-second page load times affecting user retention",
-            "task": "Lead architectural redesign to improve performance",
-            "action": "Implemented microservices architecture using Docker, Kubernetes, and Redis caching",
-            "result": "Reduced load times by 40% to 1.8s, increased user retention by 15%, saved $50K annually in server costs"
-            }
-        ],
-        "technical_skills_used": ["Python", "AWS (EC2, RDS, S3)", "Docker", "Kubernetes", "PostgreSQL"],
-        "leadership_examples": ["Mentored 3 junior developers", "Led code review processes", "Coordinated with product and design teams"],
-        "budget_managed": "$300K annual infrastructure budget",
-        "team_size_managed": 5
+            "company": "Freelance",
+            "title": "Full Stack Developer, Graphic Designer, Academic Research Writer",
+            "duration": "2023 - Present",
+            "company_context": "Self-employed freelancer working with local businesses, students, and small organizations.",
+            "team_structure": "Solo contributor",
+            "achievements_star": [
+                {
+                    "situation": "Small businesses and student clients needed support for system development, graphic design for marketing, and academic research writing.",
+                    "task": "Deliver full-cycle system development, create visually appealing design assets, and produce high-quality academic research outputs.",
+                    "action": "Developed web applications using Laravel, MySQL, TailwindCSS, and JavaScript; designed marketing materials using Canva and UI/UX using Figma; produced academic outputs using Mendeley and qualitative/quantitative research papers.",
+                    "result": "Completed 5+ freelance projects with a 100% client satisfaction rate; improved client workflow efficiency by up to 40% through automated systems; marketing designs contributed to measurable engagement increases (10–30%) on client pages and enhanced brand visibility of stores; research papers accepted with no major revisions."
+                }
+            ],
+            "technical_skills_used": {
+                "backend": ["Laravel 11-12", "PHP", "MySQL", "REST APIs", "Authentication (Fortify, Google OAuth)"],
+                "frontend": ["HTML5", "CSS3", "Bootstrap", "TailwindCSS", "JavaScript", "Ajax", "Blade"],
+                "devops_and_hosting": ["Apache (XAMPP)", "Git Version Control", "GitHub Project Management"],
+                "design_tools": ["Figma", "Canva"],
+                "research_tools": ["Mendeley", "Google Scholar"]
+            },
+            "quantifiable_achievements": [
+                "Developed 2+ small to medium-scale systems that are ready for implementation.",
+                "Reduced manual processing time for clients by up to 40% through automation.",
+                "Assisted on 2+ panel-reviewed academic papers (capstones, research papers).",
+                "Designed marketing materials used across social media and print.",
+                "Maintained 100% project delivery rate within deadline."
+            ],
+            "leadership_examples": ["Handled full end-to-end project lifecycle independently, from requirements gathering to deployment."],
+            "budget_managed": "Handled small-scale project budgets.",
+            "team_size_managed": 1
         }
     ],
+
     "skills": {
         "technical": {
-        "programming_languages": [
-            {"language": "Python", "years": 5, "proficiency": "Expert", "frameworks": ["Django", "FastAPI", "Flask"]},
-            {"language": "JavaScript", "years": 4, "proficiency": "Advanced", "frameworks": ["React", "Node.js", "TypeScript"]}
-        ],
-        "databases": ["PostgreSQL (5 years)", "MongoDB (3 years)", "Redis (2 years)"],
-        "cloud_platforms": ["AWS (4 years)", "Docker (3 years)", "Kubernetes (2 years)"],
-        "ai_ml": ["RAG systems", "Vector databases", "LLM integration", "OpenAI API"]
+            "programming_languages": [
+                {"language": "PHP", "years": 3, "proficiency": "Advanced", "frameworks": ["Laravel"]},
+                {"language": "Python", "years": 2, "proficiency": "Intermediate"}
+            ],
+            "backend_frameworks": [
+                {"framework": "Laravel", "versions_used": ["11", "12"], "packages_libraries": ["Fortify", "Filament", "Breeze"]}
+            ],
+            "frontend_technologies": [
+                {"technology": "HTML5", "years": 5, "proficiency": "Advanced"},
+                {"technology": "CSS3", "years": 4, "proficiency": "Advanced", "frameworks": ["Bootstrap", "TailwindCSS"]},
+                {"language": "JavaScript", "years": 4, "proficiency": "Intermediate", "frameworks": ["React", "Next.js", "TypeScript"]}
+            ],
+            "databases": [
+                {"database": "MySQL", "years": 4, "proficiency": "Advanced"},
+                {"database": "T-SQL / SQL Server", "years": 1, "proficiency": "Intermediate"},
+                {"database": "PostgreSQL", "years": 0.3, "proficiency": "Beginner"}
+            ],
+            "cloud_and_hosting": [
+                {"platform": "Google Cloud Platform", "years": 1, "proficiency": "Intermediate"},
+                {"platform": "cPanel", "years": 1, "proficiency": "Intermediate"},
+                {"platform": "Amazon Web Services", "years": 0.3, "proficiency": "Beginner"},
+                {"platform": "NeonDB", "years": 0.3, "proficiency": "Beginner"},
+                {"platform": "Vercel", "years": 0.3, "proficiency": "Beginner"}
+            ],
+            "ai_and_ml": [
+                {"skill": "RAG Systems", "technologies": ["Python", "Next.js"]},
+                {"skill": "Vector Databases", "technologies": ["Upstash Vector"]},
+                {"skill": "LLM Integration", "technologies": ["OpenAI API", "Groq API"]},
+                {"skill": "Prompt Engineering", "technologies": ["GPT-4.1", "Claude Sonnet 4"]}
+            ],
+            "tools": [
+                "Git", "GitHub", "Visual Studio Code", "Jupyter Notebook", "XAMPP","SQL Server Management Studio", "Figma", "Canva", "Mendeley"
+            ]
         },
-        "soft_skills": ["Technical Leadership", "Cross-functional Collaboration", "Mentoring", "Problem-solving", "Agile/Scrum"],
-        "certifications": ["AWS Solutions Architect (expires 2025)", "Certified Scrum Master (2023)"]
+
+        "soft_skills": [
+            "Client Communication",
+            "Requirements Gathering",
+            "Problem-Solving",
+            "Time Management",
+            "Adaptability",
+            "Self-Learning",
+            "Critical Thinking"
+        ],
+
+        "certifications": [
+            "ITS Database Specialist (2025–2030)"
+        ]
     },
     "education": {
-        "university": "University of Melbourne",
-        "degree": "Bachelor of Computer Science",
-        "graduation_year": 2019,
-        "gpa": "3.7/4.0 (High Distinction)",
-        "relevant_coursework": ["Data Structures", "Algorithms", "Database Systems", "Machine Learning"],
-        "thesis_project": "Predictive Analytics for E-commerce Recommendations"
+        "university": "St. Paul University Philippines",
+        "degree": "Bachelor of Information Technology",
+        "graduation_year": 2026,
+        "gpa": "N/A",
+        "relevant_coursework": ["Programming 1 & 2", "Database Management 1 & 2", "Data Structures & Algorithms", "Web and Mobile Application Development", "Systems Architecture & Administration"],
+        "thesis_project": "Online Credential Request System"
     },
     "projects_portfolio": [
         {
         "name": "AI-Powered Digital Twin Workshop Platform",
         "description": "End-to-end RAG system for interview preparation",
         "technologies": ["Python", "Upstash Vector", "Groq API", "Next.js"],
-        "impact": "Helped 100+ professionals improve interview performance",
+        "impact": "Helped professionals improve interview performance",
         "github_url": "https://github.com/username/digital-twin",
         "live_demo": "https://mydigitaltwin.vercel.app"
+        },
+        {
+        "name": "Online Credential Request System",
+        "description": "Comprehensive web-based system for managing academic credential requests with automated workflow and document generation",
+        "technologies": ["HTML & CSS", "Javascript", "Laravel 11 with Fortify", "MySQL"],
+        "impact": "Reached great extent on ISO-25010 Software Quality Standards and to be implemented in St. Paul University Philippines",
+        "key_features": [
+            "User authentication and role-based access control",
+            "Document request tracking and status management",
+            "Automated email notifications",
+            "PDF generation for official documents",
+            "Admin dashboard with analytics",
+            "Mobile-responsive design"
+        ],
+        "technical_challenges_solved": [
+            "Implemented secure file upload and storage system",
+            "Designed efficient database schema for multi-user access",
+            "Created automated workflow for request approval process"
+        ],
+        "duration": "6 months",
+        "team_size": "Individual project (Thesis)"
+        },
+        {
+        "name": "Inventory Management System",
+        "description": "Web-based inventory system for supplies tracking",
+        "technologies": ["HTML & CSS", "Javascript", "Laravel 12 with Fortify", "MySQL"],
+        "impact": "Improved inventory accuracy and reduced stock discrepancies by 30% and administrative workload by 25%"
+        },
+        {
+        "name": "Evaluation System",
+        "description": "Web-based evaluation system for academic performance tracking",
+        "technologies": ["HTML & Tailwind CSS", "JavaScript", "Laravel 12 with Fortify", "MySQL"],
+        "impact": "Streamlined evaluation process, reducing evaluation time by 40% and enhancing feedback quality"
         }
     ],
     "career_goals": {
-        "short_term": "Lead technical architect role with AI/ML focus",
-        "long_term": "Head of Engineering at AI-first company",
-        "learning_focus": ["Advanced AI/ML systems", "Large-scale system architecture", "Team leadership"],
-        "industries_interested": ["Fintech", "AI/ML", "Enterprise SaaS"]
+        "short_term": "Secure a position as a database specialist, backend developer or AI-integrated full stack developer, contributing to projects that involve designing, maintaining, and optimizing databases, building scalable web applications, and integrating AI/ML workflows such as RAG systems.",
+        "long_term": "Become a senior backend or AI systems engineer with deep expertise in database architecture, full stack development, and AI integration. Lead projects that optimize business or educational processes, mentor junior developers, and contribute to innovative AI-driven solutions.",
+        "learning_focus": [
+            "Advanced backend development with Laravel, PHP, and REST API design",
+            "Database design, optimization, and maintenance (MySQL, PostgreSQL, T-SQL)",
+            "Full stack development with React/Next.js and modern frontend frameworks",
+            "AI/ML integration including RAG pipelines, vector databases, and LLM APIs",
+            "Cloud deployment and DevOps practices (GCP, AWS, Vercel, cPanel)",
+            "System architecture, security, and performance optimization",
+            "UX/UI best practices using TailwindCSS, shadcn/ui, Figma"
+        ],
+        "industries_interested": [
+            "Tech companies focused on software development and AI solutions",
+            "Finance and fintech companies leveraging data and analytics",
+            "Business Process Outsourcing (BPO) firms implementing digital automation, backend development, and database management",
+            "Enterprises seeking database-driven digital transformation",
+            "AI and Machine Learning product companies"
+        ]
     },
     "interview_prep": {
         "common_questions": {
         "behavioral": [
-            "Tell me about a time you had to lead a difficult technical decision",
-            "Describe a project where you had to learn a new technology quickly",
-            "How do you handle conflicting priorities and tight deadlines?"
+            {
+                "question": "Tell me about a time you had to lead a difficult technical decision",
+                "answer": "In a freelance project, I was responsible for selecting the most suitable Laravel libraries for authentication and admin panel features. I carefully compared options like Fortify, Breeze, and Filament, considering factors such as security, ease of integration, and long-term maintainability. I consulted with the client to understand their needs, documented my evaluation process, and recommended a combination that balanced flexibility and reliability. The project was delivered smoothly, and the client appreciated my thorough, user-focused approach to technical decision-making."
+            },
+            {
+                "question": "Describe a project where you had to learn a new technology quickly",
+                "answer": "For my thesis project, I needed to develop a full-featured web application using Laravel, but I didn’t have much experience with its advanced features. I dedicated extra time to studying documentation, watching tutorials, and experimenting with different packages. By breaking down the requirements and learning as I built, I was able to deliver a robust system on time. This experience taught me the importance of adaptability and reinforced my confidence in picking up new technologies quickly."
+            },
+            {
+                "question": "How do you handle conflicting priorities and tight deadlines?",
+                "answer": "I prioritize by clarifying requirements, breaking tasks into manageable steps, and communicating proactively with stakeholders. I stay calm under pressure, focus on solutions, and am not afraid to ask for help or negotiate deadlines if needed. My goal is always to deliver quality work while maintaining a positive, collaborative environment."
+            }
         ],
         "technical": [
-            "Walk me through your approach to system design for a high-traffic application",
-            "How would you implement a real-time notification system?",
-            "Explain your experience with microservices architecture"
+            {
+                "question": "Walk me through your approach to system design for a high-traffic application",
+                "answer": "I start by understanding user needs and expected load, then design a scalable architecture—often using a layered approach with caching, load balancing, and database optimization. I value clear documentation and modular code, and I’m always open to feedback from more experienced engineers. My goal is to build systems that are robust, maintainable, and user-focused."
+            },
+            {
+                "question": "How would you implement a real-time notification system?",
+                "answer": "Given my experience with Laravel and JavaScript, I would implement a real-time notification system using Laravel’s broadcasting features together with a service like Pusher. I’d set up event broadcasting in Laravel to trigger notifications, and use JavaScript on the frontend to listen for these events and update the UI instantly. This approach is reliable, integrates well with my existing tech stack, and provides a smooth user experience. I’m always open to learning more advanced solutions as project needs grow."
+            },
+            {
+                "question": "Explain your experience with microservices architecture",
+                "answer": "While most of my experience is with monolithic and modular systems, I have studied microservices concepts and understand their benefits for scalability and maintainability. I’m excited to deepen my hands-on experience and am proactive about learning from team members who have worked extensively with microservices."
+            }
         ],
         "situational": [
-            "A critical production bug is affecting customers. Walk me through your response process",
-            "How would you approach mentoring a struggling team member?",
-            "Describe how you would evaluate and implement a new technology in your team"
+            {
+                "question": "A critical production bug is affecting customers. Walk me through your response process",
+                "answer": "First, I would stay calm and acknowledge the urgency. I’d communicate transparently with stakeholders, gather all relevant information, and work methodically to identify the root cause. I believe in documenting the process and sharing lessons learned to prevent future issues. My focus is always on restoring service quickly while maintaining a positive, solution-oriented attitude."
+            },
+            {
+                "question": "How would you approach mentoring a struggling team member?",
+                "answer": "I would listen to understand their challenges, offer encouragement, and share resources or techniques that have helped me. I believe in fostering a supportive environment where everyone feels comfortable asking questions. My goal is to help others grow and succeed, which ultimately strengthens the whole team."
+            },
+            {
+                "question": "Describe how you would evaluate and implement a new technology in your team",
+                "answer": "I’d start by researching the technology’s benefits and potential drawbacks, then run a small proof of concept. I’d gather feedback from the team and consider how it aligns with our goals. If it adds value, I’d help plan a smooth rollout and provide documentation or training. I’m always open to learning and sharing new ideas."
+            }
         ],
         "company_research": {
-            "research_areas": ["Company mission and values", "Recent product launches", "Engineering culture", "Technical challenges"],
-            "preparation_questions": ["What excites you about our product?", "Why do you want to work here?", "What questions do you have for us?"]
+            "research_areas": [
+                {
+                    "area": "Company mission and values",
+                    "insight": "I always review a company’s mission and values to ensure my own goals and work ethic align. I appreciate organizations that value growth, collaboration, and innovation."
+                },
+                {
+                    "area": "Recent product launches",
+                    "insight": "I research recent launches to understand the company’s direction and how I can contribute. I enjoy learning about new features and thinking about how users benefit."
+                },
+                {
+                    "area": "Engineering culture",
+                    "insight": "I look for teams that encourage learning, knowledge sharing, and open communication. I thrive in environments where feedback is valued and everyone is willing to help each other grow."
+                },
+                {
+                    "area": "Technical challenges",
+                    "insight": "I’m motivated by technical challenges and enjoy brainstorming solutions with others. I see challenges as opportunities to learn and make a positive impact."
+                }
+            ],
+            "preparation_questions": [
+                {
+                    "question": "What excites you about our product?",
+                    "answer": "I’m excited by products that solve real problems and have a clear vision. I appreciate the opportunity to contribute to something meaningful and to learn from talented colleagues."
+                },
+                {
+                    "question": "Why do you want to work here?",
+                    "answer": "I’m drawn to your company’s commitment to innovation and growth. I value environments where I can learn, contribute, and be part of a supportive team."
+                },
+                {
+                    "question": "What questions do you have for us?",
+                    "answer": "I’d love to hear more about your team’s approach to professional development and how you support continuous learning. What are some of the biggest technical challenges you’re currently facing or have faced?"
+                }
+            ]
         }
         },
         "weakness_mitigation": [
-        {
-            "weakness": "Limited experience with Kubernetes in production",
-            "mitigation": "Currently completing CKA certification, have experience with Docker and container orchestration concepts"
-        }
+            {
+                "weakness": "Limited experience with cloud technologies (AWS, GCP, Vercel, etc.)",
+                "mitigation": "Currently studying cloud platforms in university courses and gaining hands-on experience through internship projects and personal learning."
+            }
         ]
     },
     "professional_development": {
-        "recent_learning": ["RAG systems implementation", "Vector databases", "MCP protocol development"],
-        "conferences_attended": ["PyCon Australia 2024", "AWS re:Invent 2023"],
-        "publications": ["Blog post: Building Production RAG Systems with Upstash Vector"],
-        "open_source": ["Contributor to FastAPI documentation", "Maintainer of internal Python utilities library"]
+        "recent_learning": [
+            "Cloud technologies (AWS, GCP, Vercel)",
+            "Linux OS administration",
+            "Laravel 12",
+            "Next.js and TypeScript",
+            "Upstash",
+            "Groq API",
+            "MCP server architecture",
+            "RAG systems and vector databases"
+        ],
+        "conferences_attended": [
+            "TCON 6",
+            "TCON 7",
+            "Cyber Summit 2022",
+            "Cyber Summit 2023",
+            "Cyber Summit 2024",
+            "ISACA Career Roadshow 2024"
+        ],
+        "publications": [
+            "Thesis Journal: Online Credential Request System"
+        ],
+        "leadership": [
+            {
+                "organization": "Google Developer Student Clubs - St. Paul University Philippines",
+                "role": "Technology Core",
+                "duration": "2022 - 2023"
+            },
+            {
+                "organization": "Paulinian Student Government - School of Information Technology and Engineering Council",
+                "role": "Secretary",
+                "duration": "2022 - 2023"
+            },
+            {
+                "organization": "Paulinian Student Government - University Wide Council",
+                "role": "Public Relations Officer",
+                "duration": "2023 - 2024"
+            },
+            {
+                "organization": "Junior Philippine Computer Society - St. Paul University Philippines",
+                "role": "Director for Public Relation",
+                "duration": "2025 - 2026"
+            }
+        ],
+        "achievements_and_recognition": [
+            {
+                "title": "President's List",
+                "institution": "St. Paul University Philippines",
+                "year": "2022",
+                "description": "Awarded with academic excellence in IT program for garnering a GWA of 1.5 or higher"
+            },
+            {
+                "title": "1st Place in Paper Presentation at Capstone Research Project Showcase",
+                "institution": "IT Department, St. Paul University Philippines",
+                "year": "2025",
+                "description": "Recognition for innovative credential management system"
+            }
+        ]
     }
 }
