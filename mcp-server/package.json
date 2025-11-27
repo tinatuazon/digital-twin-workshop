@@ -1,0 +1,21 @@
+{
+  "name": "cristina-digital-twin-mcp-server",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "MCP Server for Cristina's Digital Twin",
+  "main": "server.mjs",
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node server.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.22.0",
+    "@upstash/vector": "^1.2.2",
+    "dotenv": "^17.2.3",
+    "groq": "^4.18.0",
+    "groq-sdk": "^0.36.0"
+  },
+  "keywords": ["mcp", "server", "digital-twin", "rag", "ai"],
+  "author": "Cristina Tuazon",
+  "license": "MIT"
+}

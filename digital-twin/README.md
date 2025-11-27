@@ -1,17 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cristina's Digital Twin - MCP Server
 
-## Getting Started
+This is a **Model Context Protocol (MCP) Server** that provides AI-powered access to Cristina Tuazon's professional profile using RAG (Retrieval-Augmented Generation).
 
-First, run the development server:
+## 🚀 Primary Usage - MCP Server
+
+The main functionality is the MCP server for integration with GitHub Copilot:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Install dependencies
+pnpm install
+
+# Run MCP server (primary use case)
+pnpm run mcp
+```
+
+## 🔧 Optional - Web UI for Testing
+
+For development and testing purposes, a Next.js web interface is available:
+
+```bash
+# Run web interface for testing (optional)
+pnpm run ui
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
