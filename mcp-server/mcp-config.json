@@ -1,0 +1,15 @@
+{
+  "name": "cristina-digital-twin-mcp",
+  "description": "Cristina Tuazon's Digital Twin MCP Server",
+  "version": "1.0.0",
+  "mcpServers": {
+    "cristina-digital-twin": {
+      "command": "node",
+      "args": ["server.mjs"],
+      "cwd": "/path/to/mcp-server",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  }
+}

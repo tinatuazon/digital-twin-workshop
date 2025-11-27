@@ -1,52 +1,66 @@
 # Digital Twin Workshop - Clean Architecture
 
-## 🎯 Project Purpose
-**Primary**: MCP Server for GitHub Copilot integration
-**Secondary**: Web UI for testing and demonstration
+## 🎯 Project Overview
+**Professional Profile Showcase + Interactive AI Chatbot + MCP Server**
 
-## 📁 Clean Project Structure
+This project demonstrates a complete AI-powered digital twin system with:
+- **Web App**: Beautiful profile showcase with interactive chatbot
+- **MCP Server**: Standalone server for GitHub Copilot integration
+- **RAG Pipeline**: AI-powered responses about professional background
+
+## 📁 Project Structure
 
 ```
 digital-twin-workshop/
-├── 📂 digital-twin/           # Main MCP server application
-│   ├── 🚀 mcp-server.mjs     # Core MCP server (MAIN ENTRY POINT)
-│   ├── 📦 package.json       # Dependencies & scripts
-│   ├── 🔐 .env.local         # Environment variables
-│   ├── 📖 MCP_USAGE.md       # MCP server documentation
-│   ├── 📂 app/               # Optional web UI for testing
-│   └── 📂 lib/               # Shared utilities
-├── 📂 data/                  # Profile data (shared)
-│   └── 📄 digitaltwin.json   # Cristina's professional profile
-├── 📂 utils/                 # Additional utilities
-│   └── 🐍 digitaltwin_rag.py # Standalone Python version
-└── 📄 README.md              # Project overview
+├── 🌐 digital-twin/          # Main web application
+│   ├── app/
+│   │   ├── page.tsx          # Profile showcase homepage
+│   │   ├── chat/             # Interactive chatbot interface
+│   │   └── api/              # API endpoints
+│   └── package.json          # Web app dependencies
+├── 🤖 mcp-server/            # Standalone MCP server
+│   ├── server.mjs           # MCP server for GitHub Copilot
+│   ├── package.json         # Server-only dependencies  
+│   └── .env                 # Server environment
+├── 📊 data/                 # Professional profile data
+│   └── digitaltwin.json     # Structured profile information
+└── 🛠️ utils/               # Additional utilities
+    └── digitaltwin_rag.py   # Standalone Python RAG script
 ```
 
-## ⚡ Quick Commands
+## 🚀 Quick Start
 
+### **Web App (Profile + Chatbot):**
 ```bash
-# Primary usage - Start MCP server
-cd digital-twin && pnpm run mcp
-
-# Testing - Web interface 
-cd digital-twin && pnpm run ui
-
-# Development - Install dependencies
-cd digital-twin && pnpm install
+cd digital-twin
+pnpm install && pnpm run dev
+# Visit: http://localhost:3000
 ```
 
-## 🧹 Cleaned Up
+### **MCP Server (GitHub Copilot):**
+```bash
+cd mcp-server
+npm install && npm start
+# Ready for MCP client connections
+```
 
-**Removed unnecessary files:**
-- ❌ `test-*.js` files (5 test files removed)
-- ❌ `/app/test` directory (redundant test UI)
-- ❌ Redundant scripts from package.json
-- ❌ Moved standalone Python script to utils/
+## 🌐 Live Demo
 
-**Focused structure on:**
-- ✅ MCP Server as primary functionality
-- ✅ Clean separation of concerns
-- ✅ Optional web UI for development/testing
-- ✅ Clear documentation and usage guides
+**Web App**: [https://digital-twin-workshop-two.vercel.app/](https://digital-twin-workshop-two.vercel.app/)
 
-This structure prioritizes the MCP server while keeping the web UI available for testing and development purposes.
+## 💡 Features
+
+- ✨ **Professional Profile Showcase** - Skills, experience, projects
+- 💬 **Interactive AI Chatbot** - Ask questions about background
+- 🤖 **MCP Server Integration** - GitHub Copilot compatibility
+- 📱 **Responsive Design** - Works on all devices
+- ⚡ **Fast AI Responses** - Groq LLM + Upstash Vector DB
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Next.js, React, TailwindCSS, TypeScript
+- **Backend**: Node.js, MCP Protocol, REST APIs
+- **AI**: Groq API, Upstash Vector, RAG Pipeline
+- **Deployment**: Vercel (Web), Standalone (MCP)
+
+This architecture provides the perfect foundation for showcasing professional expertise through an interactive AI-powered experience.

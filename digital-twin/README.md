@@ -1,45 +1,35 @@
-# Cristina's Digital Twin - MCP Server
+# Cristina's Digital Twin - Web App
 
-This is a **Model Context Protocol (MCP) Server** that provides AI-powered access to Cristina Tuazon's professional profile using RAG (Retrieval-Augmented Generation).
+**Professional Profile Showcase & Interactive AI Chatbot**
 
-## 🚀 Primary Usage - MCP Server
+This is the main web application featuring Cristina's professional profile and an interactive chatbot powered by AI.
 
-The main functionality is the MCP server for integration with GitHub Copilot:
+## 🚀 Quick Start
 
 ```bash
 # Install dependencies
 pnpm install
 
-# Run MCP server (primary use case)
-pnpm run mcp
+# Run development server
+pnpm run dev
 ```
 
-## 🔧 Optional - Web UI for Testing
+Visit [http://localhost:3000](http://localhost:3000) to see:
+- **Profile Showcase** - Professional background, skills, and projects
+- **Interactive Chatbot** - Chat with Cristina's AI twin at `/chat`
 
-For development and testing purposes, a Next.js web interface is available:
+## 🛠️ Development
 
 ```bash
-# Run web interface for testing (optional)
-pnpm run ui
+pnpm run build  # Build for production
+pnpm run start  # Start production server
+pnpm run lint   # Run linting
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌐 Deployment
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Deployed on Vercel: [https://digital-twin-workshop-two.vercel.app/](https://digital-twin-workshop-two.vercel.app/)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📁 Architecture
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This web app is part of the larger Digital Twin Workshop project. See the main README for full architecture details.
