@@ -1,0 +1,7 @@
+{
+  "buildCommand": "cd digital-twin && pnpm run build",
+  "outputDirectory": "digital-twin/.next",
+  "installCommand": "cd digital-twin && pnpm install",
+  "devCommand": "cd digital-twin && pnpm run dev",
+  "framework": "nextjs"
+}
