@@ -4,6 +4,7 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import { ScrollProgressIndicator } from "@/components/scroll-progress-indicator"
 import { AnimationProvider } from "@/contexts/animation-context"
+import { FloatingChat } from "@/components/floating-chat"
 import { getMetaInfo } from "@/lib/data"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -27,6 +28,7 @@ export default function RootLayout({
         <AnimationProvider>
           <ScrollProgressIndicator />
           {children}
+          <FloatingChat />
         </AnimationProvider>
       </body>
     </html>
