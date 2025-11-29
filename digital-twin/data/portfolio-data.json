@@ -5,14 +5,14 @@
   },
   "personal": {
     "name": "Cristina Tuazon",
-    "title": "Senior Software Engineer",
-    "location": "San Francisco, CA",
-    "avatar": "/confident-professional.png",
-    "email": "cristina.tuazon@example.com",
-    "phone": "+1 (415) 555-2671",
-    "workingHours": "Monday - Friday, 9am - 6pm PST",
+    "title": "Full Stack Developer | Graphic Designer | Database Specialist",
+    "location": "Tuguegarao City, Cagayan Valley, Philippines",
+    "avatar": "/cristina_pfp.jpg",
+    "email": "wk.cristinatuazon@gmail.com",
+    "phone": "+63 (XXX) XXX-XXXX",
+    "workingHours": "Monday - Friday, 9am - 6pm PHT",
     "availableForWork": true,
-    "badges": ["Full Stack", "AI/ML", "Cloud Architecture"],
+    "badges": ["Full Stack", "Database Specialist", "AI/ML"],
     "social": [
       {
         "platform": "GitHub",
@@ -21,27 +21,27 @@
       },
       {
         "platform": "LinkedIn",
-        "url": "#",
+        "url": "https://www.linkedin.com/in/cristina-tuazon/",
         "icon": "Linkedin"
       },
       {
-        "platform": "Twitter",
-        "url": "#",
-        "icon": "Twitter"
+        "platform": "Portfolio",
+        "url": "https://yourportfolio.com",
+        "icon": "ExternalLink"
       },
       {
         "platform": "Email",
-        "url": "mailto:cristina.tuazon@example.com",
+        "url": "mailto:wk.cristinatuazon@gmail.com",
         "icon": "Mail"
       }
     ]
   },
   "about": {
-    "bio": "Senior Software Engineer with 8+ years of experience building scalable web applications and AI-powered solutions. Passionate about clean code, system architecture, and mentoring the next generation of developers.",
+    "bio": "Passionate full stack developer and database specialist with strong experience in building web applications, designing user-centric interfaces, and producing academic research outputs. Currently exploring AI development, RAG pipelines, and model integration to expand technical depth.",
     "focus": [
-      "Building high-performance, scalable web applications",
-      "Developing AI-powered solutions and chatbots",
-      "Leading technical teams and implementing best practices"
+      "Building efficient, scalable web applications using Laravel and MySQL",
+      "Developing AI-powered solutions and RAG systems",
+      "Creating complete end-to-end solutions with design proficiency and research experience"
     ],
     "languages": [
       {
@@ -55,15 +55,9 @@
         "proficiency": "Native",
         "level": 100,
         "flag": "🇵🇭"
-      },
-      {
-        "name": "Spanish",
-        "proficiency": "Intermediate",
-        "level": 60,
-        "flag": "🇪🇸"
       }
     ],
-    "interests": ["Machine Learning", "Cloud Computing", "Open Source", "Mentoring", "Photography"]
+    "interests": ["Machine Learning", "Database Design", "AI Integration", "Web Development", "Academic Research"]
   },
   "navigation": [
     {
@@ -93,92 +87,109 @@
   ],
   "experience": [
     {
-      "title": "Senior Software Engineer",
-      "company": "TechFlow Solutions",
-      "period": "2021 - Present",
-      "description": "Lead the development of cloud-native applications and AI-powered solutions. Architect scalable systems handling millions of users while maintaining 99.9% uptime. Mentor junior developers and drive technical excellence across teams.",
+      "title": "Full Stack Developer, Graphic Designer, Academic Research Writer",
+      "company": "Freelance",
+      "period": "2023 - Present",
+      "description": "Self-employed freelancer working with local businesses, students, and small organizations. Deliver complete web applications from requirements gathering through deployment, while maintaining quality and meeting tight academic deadlines.",
       "achievements": [
-        "Built microservices architecture that improved system performance by 45%",
-        "Led the development of AI chatbot platform serving 100k+ daily users",
-        "Implemented CI/CD pipelines reducing deployment time by 70%"
+        "Developed 3 production-ready web systems using Laravel 11-12, MySQL, and responsive front-end technologies",
+        "Achieved 100% client satisfaction rate across 5+ freelance projects with 100% on-time delivery",
+        "Increased client social media engagement by 10-30% through design work"
       ],
-      "technologies": ["TypeScript", "Next.js", "Node.js", "PostgreSQL", "AWS", "Docker"]
+      "technologies": ["Laravel 11-12", "PHP", "MySQL", "HTML5", "CSS3", "JavaScript", "TailwindCSS", "Bootstrap", "Figma"]
     },
     {
-      "title": "Full Stack Developer",
-      "company": "InnovateCorp",
-      "period": "2019 - 2021",
-      "description": "Developed end-to-end web applications using modern JavaScript frameworks. Collaborated with product teams to deliver user-centric features and implemented robust testing strategies.",
+      "title": "Intern - Full Stack & Agentic AI Developer",
+      "company": "Employability Advantage",
+      "period": "September 23 2025 - December 2, 2025",
+      "description": "Contributed to the development of an Agentic AI system integrated with web applications. Had a hands on experience on building RAG pipelines using Groq SDK and Upstash Vector for enhanced data retrieval and AI response generation.",
       "achievements": [
-        "Built React-based dashboard increasing user engagement by 60%",
-        "Optimized database queries reducing API response times by 40%",
-        "Mentored 3 junior developers and established code review processes"
+        "Implemented RAG pipelines using Groq SDK and Upstash Vector, improving AI response accuracy by 25%",
+        "Developed front-end components using React and Next.js for seamless user interaction with AI features",
+        "Collaborated with a team of 4 developers to integrate AI functionalities into existing web applications"
       ],
-      "technologies": ["React", "Python", "Django", "MySQL", "Redis", "Git"]
-    },
-    {
-      "title": "Software Developer",
-      "company": "StartupXYZ",
-      "period": "2017 - 2019",
-      "description": "Contributed to the development of a SaaS platform from MVP to 10,000+ users. Implemented features across the full stack and participated in architectural decisions for scaling.",
-      "achievements": [
-        "Developed RESTful APIs serving 1M+ requests daily",
-        "Implemented real-time features using WebSocket technology",
-        "Created automated testing suite improving code reliability by 50%"
-      ],
-      "technologies": ["JavaScript", "Express.js", "MongoDB", "Socket.io", "Jest"]
+      "technologies": ["Next.js", "React", "Node.js", "Upstash", "Groq", "NeonDB", "Vercel", "Github", "Shadcn UI", "v0.app"]
     }
   ],
   "credentials": {
+    "awards": [
+      {
+        "name": "1st Place, Paper Presentation on Capstone Research Project Showcase",
+        "project": "Online Credential Request System",
+        "issuer": "St. Paul University Philippines",
+        "date": "2025",
+        "logo": "/spup_logo.png",
+        "certificateImage": "/award_capstone_cert.png"
+      },
+            {
+        "name": "Dean's List, 2nd Semester A.Y. 2023-2024",
+        "issuer": "St. Paul University Philippines",
+        "date": "2024",
+        "logo": "/spup_logo.png",
+        "certificateImage": "/award_capstone_cert.png"
+      },
+      {
+        "name": "President's List, 1st Semester A.Y. 2023-2024",
+        "issuer": "St. Paul University Philippines",
+        "date": "2023",
+        "logo": "/spup_logo.png",
+        "certificateImage": "/award_capstone_cert.png"
+      },
+      {
+        "name": "With High Honors, Grade 12",
+        "issuer": "Tuguegarao City Science High School",
+        "date": "2022",
+        "logo": "/tcshs_logo.png",
+        "certificateImage": "/award_capstone_cert.png"
+      },
+      {
+        "name": "With Honors, Grade 11",
+        "issuer": "Tuguegarao City Science High School",
+        "date": "2021",
+        "logo": "/tcshs_logo.png",
+        "certificateImage": "/award_capstone_cert.png"
+      }
+    ],
     "certifications": [
       {
-        "name": "AWS Solutions Architect",
-        "issuer": "Amazon Web Services",
-        "date": "2023",
-        "logo": "/aws-logo.png"
-      },
-      {
-        "name": "Professional Cloud Developer",
-        "issuer": "Google Cloud Platform",
-        "date": "2022",
-        "logo": "/gcp-logo.png"
-      },
-      {
-        "name": "Certified Kubernetes Administrator",
-        "issuer": "Cloud Native Computing Foundation",
-        "date": "2021",
-        "logo": "/k8s-logo.png"
+        "name": "ITS Database Specialist",
+        "issuer": "Information Technology Specialist Program",
+        "date": "2025",
+        "logo": "/certiport_logo.png",
+        "certificateImage": "/database_cert.png"
       }
     ],
     "education": [
       {
-        "degree": "Master of Science in Computer Science",
-        "institution": "Stanford University",
-        "year": "2015-2017",
-        "logo": "/stanford-logo.png"
+        "degree": "Bachelor of Information Technology",
+        "institution": "St. Paul University Philippines",
+        "year": "2022-2026",
+        "logo": "/spup_logo.png"
       },
       {
-        "degree": "Bachelor of Science in Software Engineering",
-        "institution": "University of California, Berkeley",
-        "year": "2011-2015",
-        "logo": "/berkeley-logo.png"
+        "degree": "Senior High School (STEM Strand)",
+        "institution": "Tuguegarao City Science High School",
+        "year": "2020-2022",
+        "logo": "/tcshs_logo.png"
       }
     ],
     "skills": [
       "Full Stack Development",
-      "System Architecture",
-      "Cloud Computing",
       "Database Design",
-      "API Development",
-      "DevOps",
-      "Machine Learning",
-      "Team Leadership"
+      "Laravel Development",
+      "AI/ML Integration",
+      "System Architecture",
+      "Web Application Development",
+      "Academic Research",
+      "Graphic Design"
     ]
   },
   "technicalSkills": {
-    "development": ["TypeScript", "JavaScript", "Python", "React", "Next.js", "Node.js", "Express", "Django"],
-    "database": ["PostgreSQL", "MongoDB", "Redis", "MySQL", "Prisma", "Supabase"],
-    "cloud": ["AWS", "Google Cloud", "Vercel", "Docker", "Kubernetes", "Terraform", "CI/CD"],
-    "aiMl": ["OpenAI API", "LangChain", "Vector Databases", "RAG Systems", "Hugging Face", "TensorFlow"]
+    "development": ["PHP", "Laravel", "JavaScript", "Python", "HTML5", "CSS3", "React", "Next.js", "TypeScript"],
+    "database": ["MySQL", "SQL Server", "PostgreSQL", "Database Design", "T-SQL"],
+    "cloud": ["Google Cloud Platform", "AWS", "Vercel", "NeonDB", "cPanel"],
+    "aiMl": ["OpenAI API", "Groq API", "Vector Databases", "RAG Systems", "Upstash Vector", "Prompt Engineering"],
+    "design": ["Figma", "Canva", "TailwindCSS", "Bootstrap", "UI/UX Design"],
+    "tools": ["Git", "GitHub", "Visual Studio Code", "XAMPP", "SQL Server Management Studio", "Jupyter Notebook"]
   }
 }

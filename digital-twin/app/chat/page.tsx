@@ -1,7 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { ArrowLeft, Send, MessageCircle, Sparkles } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { PortfolioHeader } from "@/components/portfolio-header";
+import { AnimatedSection } from "@/components/animated-section";
 
 interface Message {
   role: "user" | "assistant";
@@ -10,6 +16,10 @@ interface Message {
 }
 
 export default function ChatPage() {
+    // Always scroll to top on mount
+    useEffect(() => {
+      window.scrollTo({ top: 0, behavior: "auto" });
+    }, []);
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "assistant",
@@ -19,6 +29,13 @@ export default function ChatPage() {
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  // Remove auto-scroll to bottom after sending a message
 
   const sendMessage = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -35,7 +52,6 @@ export default function ChatPage() {
     setIsLoading(true);
 
     try {
-      // Call your MCP server endpoint
       const response = await fetch("/api/chat", {
         method: "POST",
         headers: {
@@ -73,100 +89,149 @@ export default function ChatPage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <main className="min-h-screen bg-background dark:bg-[#18181b] text-foreground">
+      {/* Solid background - matching home page */}
+      <div className="fixed inset-0 bg-background dark:bg-[#18181b] z-0"></div>
+
       {/* Header */}
-      <nav className="bg-slate-900/50 backdrop-blur-sm border-b border-slate-700">
-        <div className="max-w-4xl mx-auto px-6 py-4">
-          <div className="flex justify-between items-center">
-            <Link href="/" className="text-2xl font-bold text-white hover:text-blue-400 transition-colors">
-              ← Cristina Tuazon
-            </Link>
-            <div className="text-blue-400 font-medium">Chat with AI Twin</div>
-          </div>
-        </div>
-      </nav>
+      <PortfolioHeader />
 
-      {/* Chat Interface */}
-      <div className="max-w-4xl mx-auto px-6 py-8 h-[calc(100vh-80px)] flex flex-col">
-        {/* Messages */}
-        <div className="flex-1 overflow-y-auto mb-6 space-y-4">
-          {messages.map((message, index) => (
-            <div
-              key={index}
-              className={`flex ${message.role === "user" ? "justify-end" : "justify-start"}`}
-            >
-              <div
-                className={`max-w-[80%] px-4 py-3 rounded-lg ${
-                  message.role === "user"
-                    ? "bg-blue-600 text-white"
-                    : "bg-slate-800 text-slate-100 border border-slate-700"
-                }`}
-              >
-                <p className="whitespace-pre-wrap">{message.content}</p>
-                <div className={`text-xs mt-2 ${
-                  message.role === "user" ? "text-blue-200" : "text-slate-500"
-                }`}>
-                  {message.timestamp.toLocaleTimeString()}
+      <div className="relative z-10 container mx-auto p-3 sm:p-4 pt-20 sm:pt-24 pb-6 sm:pb-8">
+        {/* Chat Header */}
+        <AnimatedSection animation="fade-up">
+          <div className="mb-6">
+            <div className="flex items-center justify-between mb-4">
+              <Link href="/" className="flex items-center text-muted-foreground hover:text-foreground transition-colors group">
+                <ArrowLeft className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" />
+                <span>Back to Portfolio</span>
+              </Link>
+            </div>
+            
+            <div className="flex items-center mb-2">
+              <div className="flex items-center mr-3">
+                <MessageCircle className="w-6 h-6 mr-2 text-primary" />
+                <Sparkles className="w-4 h-4 text-primary animate-pulse" />
+              </div>
+              <h1 className="text-2xl font-bold">Chat with Cristina's AI Twin</h1>
+            </div>
+            <p className="text-muted-foreground">Ask me anything about Cristina's professional background, skills, experience, or projects!</p>
+          </div>
+        </AnimatedSection>
+
+        {/* Chat Interface */}
+        <AnimatedSection animation="fade-up" delay={100}>
+          <Card className="bg-card/70 border-border backdrop-blur-sm h-[calc(100vh-280px)] flex flex-col">
+            <CardHeader className="flex flex-row items-center justify-between p-4 border-b border-border flex-shrink-0">
+              <CardTitle className="text-lg flex items-center">
+                <MessageCircle className="w-5 h-5 mr-2 text-primary" />
+                AI Digital Twin
+              </CardTitle>
+              <div className="text-sm text-muted-foreground">
+                {messages.length} message{messages.length !== 1 ? 's' : ''}
+              </div>
+            </CardHeader>
+            
+            <CardContent className="flex-1 flex flex-col p-0 min-h-0">
+              {/* Messages */}
+              <div className="flex-1 overflow-y-auto p-4 space-y-4 min-h-0">
+                {messages.map((message, index) => (
+                  <div
+                    key={index}
+                    className={`flex ${message.role === "user" ? "justify-end" : "justify-start"}`}
+                  >
+                    <div
+                      className={`max-w-[80%] px-4 py-3 rounded-lg ${
+                        message.role === "user"
+                          ? "bg-primary text-primary-foreground"
+                          : "bg-muted text-foreground border border-border"
+                      }`}
+                    >
+                      <p className="whitespace-pre-wrap text-sm">{message.content}</p>
+                      <div className={`text-xs mt-2 ${
+                        message.role === "user" ? "text-primary-foreground/70" : "text-muted-foreground"
+                      }`}>
+                        {message.timestamp.toLocaleTimeString()}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+                
+                {isLoading && (
+                  <div className="flex justify-start">
+                    <div className="bg-muted border border-border px-4 py-3 rounded-lg">
+                      <div className="flex space-x-1">
+                        <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce"></div>
+                        <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" style={{ animationDelay: "0.1s" }}></div>
+                        <div className="w-2 h-2 bg-muted-foreground rounded-full animate-bounce" style={{ animationDelay: "0.2s" }}></div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+                
+                {/* Invisible div to scroll to */}
+                <div ref={messagesEndRef} />
+              </div>
+
+              {/* Input Form */}
+              <div className="p-4 border-t border-border flex-shrink-0">
+                <form onSubmit={sendMessage} className="mb-3">
+                  <div className="flex gap-2">
+                    <Input
+                      type="text"
+                      value={input}
+                      onChange={(e) => setInput(e.target.value)}
+                      placeholder="Ask about Cristina's experience, skills, projects..."
+                      className="flex-1 bg-background border-border text-foreground placeholder-muted-foreground"
+                      disabled={isLoading}
+                    />
+                    <Button
+                      type="submit"
+                      disabled={isLoading || !input.trim()}
+                      className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                    >
+                      <Send className="w-4 h-4" />
+                    </Button>
+                  </div>
+                </form>
+
+                {/* Suggested Questions */}
+                <div className="space-y-2">
+                  <p className="text-muted-foreground text-sm">Suggested questions:</p>
+                  <div className="flex flex-wrap gap-2">
+                    {[
+                      "What is your experience with Laravel?",
+                      "Tell me about your thesis project",
+                      "What are your career goals?",
+                      "Describe your technical skills",
+                      "What projects have you worked on?"
+                    ].map((suggestion, index) => (
+                      <Button
+                        key={index}
+                        onClick={() => setInput(suggestion)}
+                        variant="outline"
+                        size="sm"
+                        className="text-xs h-7 bg-secondary/50 border-border text-secondary-foreground hover:bg-secondary"
+                        disabled={isLoading}
+                      >
+                        {suggestion}
+                      </Button>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-          
-          {isLoading && (
-            <div className="flex justify-start">
-              <div className="bg-slate-800 border border-slate-700 px-4 py-3 rounded-lg">
-                <div className="flex space-x-1">
-                  <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce"></div>
-                  <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: "0.1s" }}></div>
-                  <div className="w-2 h-2 bg-slate-400 rounded-full animate-bounce" style={{ animationDelay: "0.2s" }}></div>
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
+            </CardContent>
+          </Card>
+        </AnimatedSection>
 
-        {/* Input Form */}
-        <form onSubmit={sendMessage} className="flex gap-3">
-          <input
-            type="text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            placeholder="Ask about Cristina's experience, skills, projects..."
-            className="flex-1 bg-slate-800 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-            disabled={isLoading}
-          />
-          <button
-            type="submit"
-            disabled={isLoading || !input.trim()}
-            className="bg-blue-600 hover:bg-blue-700 disabled:bg-slate-700 disabled:cursor-not-allowed px-6 py-3 rounded-lg text-white font-medium transition-colors"
-          >
-            Send
-          </button>
-        </form>
-
-        {/* Suggested Questions */}
-        <div className="mt-4">
-          <p className="text-slate-400 text-sm mb-3">Suggested questions:</p>
-          <div className="flex flex-wrap gap-2">
-            {[
-              "What is your experience with Laravel?",
-              "Tell me about your thesis project",
-              "What are your career goals?",
-              "Describe your technical skills",
-              "What projects have you worked on?"
-            ].map((suggestion, index) => (
-              <button
-                key={index}
-                onClick={() => setInput(suggestion)}
-                className="bg-slate-800 hover:bg-slate-700 border border-slate-700 px-3 py-1 rounded-full text-sm text-slate-300 transition-colors"
-                disabled={isLoading}
-              >
-                {suggestion}
-              </button>
-            ))}
-          </div>
-        </div>
+        {/* Footer */}
+        <AnimatedSection
+          animation="fade-in"
+          delay={200}
+          className="mt-8 sm:mt-12 py-4 sm:py-6 text-center text-xs sm:text-sm text-muted-foreground"
+        >
+          <p>© {new Date().getFullYear()} Cristina Tuazon. All rights reserved.</p>
+        </AnimatedSection>
       </div>
-    </div>
+    </main>
   );
 }

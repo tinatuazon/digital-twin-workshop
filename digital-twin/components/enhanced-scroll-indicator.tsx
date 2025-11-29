@@ -48,7 +48,7 @@ export function EnhancedScrollIndicator() {
       <div className="flex flex-col items-center">
         {/* Circular progress indicator */}
         <div
-          className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-zinc-800/80 backdrop-blur-sm cursor-pointer hover:bg-zinc-700/80 transition-colors"
+          className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-zinc-900/80 backdrop-blur-sm cursor-pointer hover:bg-zinc-800/80 transition-colors"
           onClick={scrollToTop}
           role="button"
           aria-label="Scroll to top"
@@ -83,20 +83,20 @@ export function EnhancedScrollIndicator() {
             />
             <defs>
               <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#06b6d4" />
-                <stop offset="100%" stopColor="#3b82f6" />
+                <stop offset="0%" stopColor="#22d3ee" />
+                <stop offset="100%" stopColor="#22d3ee" />
               </linearGradient>
             </defs>
           </svg>
 
           {/* Percentage text */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <ChevronUp className="h-4 w-4 sm:h-5 sm:w-5 text-cyan-400" />
+            <ChevronUp className="h-4 w-4 sm:h-5 sm:w-5 text-blue-600 dark:text-[#22d3ee]" />
           </div>
         </div>
 
         {/* Percentage label */}
-        <div className="mt-1 sm:mt-2 text-xs font-medium bg-zinc-800/80 backdrop-blur-sm text-white px-2 py-1 rounded-md">
+        <div className="mt-1 sm:mt-2 text-xs font-medium bg-zinc-900/80 backdrop-blur-sm text-white px-2 py-1 rounded-md">
           {progressPercentage}%
         </div>
       </div>

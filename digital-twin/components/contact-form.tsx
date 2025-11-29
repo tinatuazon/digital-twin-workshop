@@ -46,14 +46,14 @@ export function ContactForm() {
   if (isSubmitted) {
     return (
       <div className="flex flex-col items-center justify-center p-6">
-        <div className="w-16 h-16 mb-4 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center">
+        <div className="w-16 h-16 mb-4 rounded-full bg-[#22d3ee] flex items-center justify-center">
           <SendIcon className="w-6 h-6 text-white" />
         </div>
-        <h4 className="text-lg font-medium mb-2">Message Sent!</h4>
-        <p className="text-sm text-center text-zinc-400 mb-4">
+        <h4 className="text-lg font-medium mb-2 text-gray-900 dark:text-foreground">Message Sent!</h4>
+        <p className="text-sm text-center text-gray-600 dark:text-muted-foreground mb-4">
           Thanks for reaching out. I'll get back to you as soon as possible.
         </p>
-        <Button variant="outline" onClick={() => setIsSubmitted(false)}>
+        <Button variant="outline" onClick={() => setIsSubmitted(false)} className="border-gray-300 dark:border-border text-gray-700 dark:text-foreground hover:bg-gray-100 dark:hover:bg-zinc-800/40">
           Send Another Message
         </Button>
       </div>
@@ -69,11 +69,11 @@ export function ContactForm() {
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-zinc-400">Name</FormLabel>
+                <FormLabel className="text-gray-700 dark:text-muted-foreground font-medium">Name</FormLabel>
                 <FormControl>
                   <Input
                     placeholder="Your name"
-                    className="bg-zinc-800/50 border-zinc-700 focus:border-cyan-500"
+                    className="bg-gray-50 dark:bg-zinc-900/50 border-gray-200 dark:border-zinc-800 focus:border-[#22d3ee] dark:focus:border-[#22d3ee]"
                     {...field}
                   />
                 </FormControl>
@@ -87,12 +87,12 @@ export function ContactForm() {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel className="text-zinc-400">Email</FormLabel>
+                <FormLabel className="text-gray-700 dark:text-muted-foreground font-medium">Email</FormLabel>
                 <FormControl>
                   <Input
                     type="email"
                     placeholder="your.email@example.com"
-                    className="bg-zinc-800/50 border-zinc-700 focus:border-cyan-500"
+                    className="bg-gray-50 dark:bg-zinc-900/50 border-gray-200 dark:border-zinc-800 focus:border-[#22d3ee] dark:focus:border-[#22d3ee]"
                     {...field}
                   />
                 </FormControl>
@@ -107,11 +107,11 @@ export function ContactForm() {
           name="subject"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-zinc-400">Subject</FormLabel>
+              <FormLabel className="text-gray-700 dark:text-muted-foreground font-medium">Subject</FormLabel>
               <FormControl>
                 <Input
                   placeholder="What is this regarding?"
-                  className="bg-zinc-800/50 border-zinc-700 focus:border-cyan-500"
+                  className="bg-gray-50 dark:bg-zinc-900/50 border-gray-200 dark:border-zinc-800 focus:border-[#22d3ee] dark:focus:border-[#22d3ee]"
                   {...field}
                 />
               </FormControl>
@@ -125,11 +125,11 @@ export function ContactForm() {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-zinc-400">Message</FormLabel>
+              <FormLabel className="text-gray-700 dark:text-muted-foreground font-medium">Message</FormLabel>
               <FormControl>
                 <Textarea
                   placeholder="Your message"
-                  className="bg-zinc-800/50 border-zinc-700 focus:border-cyan-500 min-h-[120px]"
+                  className="bg-gray-50 dark:bg-zinc-900/50 border-gray-200 dark:border-zinc-800 focus:border-[#22d3ee] dark:focus:border-[#22d3ee] min-h-[120px]"
                   {...field}
                 />
               </FormControl>
@@ -140,7 +140,7 @@ export function ContactForm() {
 
         <Button
           type="submit"
-          className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600"
+          className="w-full bg-[#22d3ee] hover:bg-[#1dd1e6] text-black"
           disabled={form.formState.isSubmitting}
         >
           {form.formState.isSubmitting ? (

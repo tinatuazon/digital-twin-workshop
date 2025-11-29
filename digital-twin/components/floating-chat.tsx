@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react"
 import { useTheme } from "next-themes"
-import { MessageCircle, X, Send, Sun, Moon } from "lucide-react"
+import { MessageCircle, X, Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -15,7 +15,29 @@ interface Message {
 }
 
 export function FloatingChat() {
-  const [isOpen, setIsOpen] = useState(false)
+    // Ref for chat window and button
+    const chatRef = useRef<HTMLDivElement>(null)
+    const buttonRef = useRef<HTMLButtonElement>(null)
+
+    // State for chat open/close
+    const [isOpen, setIsOpen] = useState(false)
+
+    // Close chat when clicking outside
+    useEffect(() => {
+      if (!isOpen) return;
+      function handleClickOutside(event: MouseEvent) {
+        if (
+          chatRef.current &&
+          !chatRef.current.contains(event.target as Node) &&
+          buttonRef.current &&
+          !buttonRef.current.contains(event.target as Node)
+        ) {
+          setIsOpen(false);
+        }
+      }
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, [isOpen]);
   const { theme = 'dark', setTheme } = useTheme()
   const [messages, setMessages] = useState<Message[]>([
     {
@@ -90,45 +112,36 @@ export function FloatingChat() {
   return (
     <>
       {/* Floating Chat Button */}
-      {!isOpen && (
-        <Button
-          onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 w-14 h-14 rounded-full bg-blue-600 hover:bg-blue-700 shadow-lg hover:shadow-xl transition-all duration-300 z-50"
-          size="icon"
-        >
-          <MessageCircle className="w-6 h-6 text-white" />
-        </Button>
-      )}
+      {/* Always show the chatbot icon */}
+      <Button
+        ref={buttonRef}
+        onClick={() => setIsOpen((open) => !open)}
+        className="fixed bottom-6 right-6 w-14 h-14 rounded-full bg-blue-600 hover:bg-blue-700 dark:bg-[#22d3ee] dark:hover:bg-[#1dd1e6] shadow-md hover:shadow-lg transition-all duration-300 z-50"
+        size="icon"
+        aria-label={isOpen ? 'Close chat' : 'Open chat'}
+      >
+        <MessageCircle className="w-6 h-6 text-white" />
+      </Button>
 
-      {/* Chat Window */}
+      {/* Chat Window above the icon */}
       {isOpen && (
         <Card
-          className={`fixed bottom-6 right-6 w-[25rem] h-[32rem] z-50 flex flex-col shadow-2xl overflow-hidden border backdrop-blur-sm
-            ${theme === 'dark' ? 'bg-zinc-900/95 border-zinc-700' : 'bg-white border-zinc-200'}`}
+          ref={chatRef}
+          className={`fixed bottom-24 right-6 w-[25rem] h-[32rem] z-50 flex flex-col shadow-2xl overflow-hidden border backdrop-blur-sm
+            ${theme === 'dark' ? 'bg-zinc-900/95 border-zinc-800' : 'bg-white border-zinc-200'}`}
         >
           <CardHeader className={`flex flex-row items-center justify-between p-4 border-b flex-shrink-0
-            ${theme === 'dark' ? 'border-zinc-700' : 'border-zinc-200'}`}
+            ${theme === 'dark' ? 'border-zinc-800' : 'border-zinc-200'}`}
           >
             <CardTitle className={`text-sm ${theme === 'dark' ? 'text-white' : 'text-zinc-900'}`}>Chat with Cristina's AI Twin</CardTitle>
-            <div className="flex gap-1 items-center">
-              <Button
-                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                variant="ghost"
-                size="icon"
-                className={theme === 'dark' ? 'text-yellow-300 hover:text-yellow-400' : 'text-blue-600 hover:text-blue-700'}
-                aria-label="Toggle theme"
-              >
-                {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-              </Button>
-              <Button
-                onClick={() => setIsOpen(false)}
-                variant="ghost"
-                size="icon"
-                className={theme === 'dark' ? 'h-6 w-6 text-zinc-400 hover:text-white' : 'h-6 w-6 text-zinc-500 hover:text-zinc-900'}
-              >
-                <X className="w-4 h-4" />
-              </Button>
-            </div>
+            <Button
+              onClick={() => setIsOpen(false)}
+              variant="ghost"
+              size="icon"
+              className={theme === 'dark' ? 'h-6 w-6 text-zinc-400 hover:text-white' : 'h-6 w-6 text-zinc-500 hover:text-zinc-900'}
+            >
+              <X className="w-4 h-4" />
+            </Button>
           </CardHeader>
           
           <CardContent className="flex-1 flex flex-col p-0 min-h-0">
@@ -143,10 +156,10 @@ export function FloatingChat() {
                     className={`max-w-[80%] px-3 py-2 rounded-lg text-sm ${
                       message.role === "user"
                         ? theme === 'dark'
-                          ? 'bg-blue-600 text-white'
-                          : 'bg-blue-500 text-white'
+                          ? 'bg-[#22d3ee] text-black'
+                          : 'bg-[#1dd1e6] text-black'
                         : theme === 'dark'
-                          ? 'bg-zinc-800 text-zinc-100'
+                          ? 'bg-zinc-900 text-zinc-100'
                           : 'bg-zinc-200 text-zinc-900'
                     }`}
                   >
@@ -157,7 +170,7 @@ export function FloatingChat() {
               
               {isLoading && (
                 <div className="flex justify-start">
-                  <div className={theme === 'dark' ? 'bg-zinc-800 px-3 py-2 rounded-lg' : 'bg-zinc-200 px-3 py-2 rounded-lg'}>
+                  <div className={theme === 'dark' ? 'bg-zinc-900 px-3 py-2 rounded-lg' : 'bg-zinc-200 px-3 py-2 rounded-lg'}>
                     <div className="flex space-x-1">
                       <div className={theme === 'dark' ? 'w-2 h-2 bg-zinc-400 rounded-full animate-bounce' : 'w-2 h-2 bg-zinc-500 rounded-full animate-bounce'}></div>
                       <div className={theme === 'dark' ? 'w-2 h-2 bg-zinc-400 rounded-full animate-bounce' : 'w-2 h-2 bg-zinc-500 rounded-full animate-bounce'} style={{ animationDelay: "0.1s" }}></div>
@@ -172,7 +185,7 @@ export function FloatingChat() {
             </div>
 
             {/* Input Form */}
-            <div className={`p-3 border-t flex-shrink-0 ${theme === 'dark' ? 'border-zinc-700' : 'border-zinc-200 bg-white'}`}>
+            <div className={`p-3 border-t flex-shrink-0 ${theme === 'dark' ? 'border-zinc-800' : 'border-zinc-200 bg-white'}`}>
               <form onSubmit={sendMessage} className="mb-2">
                 <div className="flex gap-2">
                   <Input
@@ -180,14 +193,14 @@ export function FloatingChat() {
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                     placeholder="Ask about Cristina..."
-                    className={`flex-1 text-sm h-8 ${theme === 'dark' ? 'bg-zinc-800 border-zinc-700 text-white placeholder-zinc-400' : 'bg-zinc-100 border-zinc-300 text-zinc-900 placeholder-zinc-400'}`}
+                    className="flex-1 text-sm h-8 bg-background border-border text-foreground placeholder-muted-foreground"
                     disabled={isLoading}
                   />
                   <Button
                     type="submit"
                     disabled={isLoading || !input.trim()}
                     size="icon"
-                    className={theme === 'dark' ? 'h-8 w-8 bg-blue-600 hover:bg-blue-700' : 'h-8 w-8 bg-blue-500 hover:bg-blue-600'}
+                    className="h-8 w-8 bg-[#22d3ee] hover:bg-[#1dd1e6] text-black"
                   >
                     <Send className="w-3 h-3" />
                   </Button>
@@ -206,7 +219,7 @@ export function FloatingChat() {
                     onClick={() => setInput(suggestion.replace("?", ""))}
                     variant="outline"
                     size="sm"
-                    className={`h-6 px-2 text-xs flex-shrink-0 ${theme === 'dark' ? 'bg-zinc-800 border-zinc-700 text-zinc-300 hover:bg-zinc-700' : 'bg-zinc-100 border-zinc-300 text-zinc-700 hover:bg-zinc-200'}`}
+                    className={`h-6 px-2 text-xs flex-shrink-0 ${theme === 'dark' ? 'bg-zinc-900 border-zinc-800 text-zinc-300 hover:bg-zinc-800' : 'bg-zinc-100 border-zinc-300 text-zinc-700 hover:bg-zinc-200'}`}
                     disabled={isLoading}
                   >
                     {suggestion}

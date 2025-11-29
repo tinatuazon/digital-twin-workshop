@@ -20,10 +20,10 @@ export function SocialLinks({ socialLinks }: SocialLinksProps) {
           <a
             key={index}
             href={link.url}
-            className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-zinc-800 flex items-center justify-center hover:bg-zinc-700 transition-colors"
+            className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gray-100 dark:bg-muted flex items-center justify-center hover:bg-gray-200 dark:hover:bg-muted/80 transition-colors border border-gray-200 dark:border-transparent"
             aria-label={link.platform}
           >
-            {IconComponent && <IconComponent className="w-3 h-3 sm:w-4 sm:h-4" />}
+            {IconComponent && <IconComponent className="w-4 h-4 text-gray-700 dark:text-foreground" />}
           </a>
         )
       })}
